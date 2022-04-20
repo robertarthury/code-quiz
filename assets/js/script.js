@@ -1,33 +1,20 @@
-// define the object for the question entity
-let question = {
-    title: 'Which of the following is correct about JavaScript?',
-    alternatives: ['JavaScript is Assembly-language', 'JavaScript is an Object-Based language', 'JavaScript is an Object-Oriented language', ' JavaScript is a High-level language'],
-    correctAnswer: 1
-  };
+const correctAnswers = ['B','B','B','B'];
+const form = document.querySelector('.quiz-form');
+const result = document.querySelector('.result');
 
-  // function for showing the question
-function showQuestion(q) {
-    let titleDiv = document.getElementById('title');
-    titleDiv.textContent = q.title;
-  
-  let alts = document.querySelectorAll('.alternative');
-  console.log(alts);
-  alts.forEach(function(element, index){
-    element.textContent = q.alternatives[index];
-    element.addEventListener('click', function(){
-        if (q.correctAnswer == index) {
-          console.log('Correct Answer!');
-        } else {
-          console.log('Wrong Answer!');
-        }
-    });
-}); 
-}
+form.addEventListener('submit', e => {
+  e.preventDefault();
 
-  // call the function
-  showQuestion(question);
+  let score = 0;
+  const userAnswers = [form.q1.value, form.q2.value, form.q3.value, form.q4.value]
 
-     let btn = document.getElementById('btn');
-    btn.addEventListener('click', function() {
-    console.log('Clicked!');
-    })
+userAnswers.forEach((answer, index) => {
+  if(answer === correctAnswers[index]){
+    score += 25;
+  }
+});
+  scrollTo(0,0);
+  result.querySelector('span').textContent = `${score}`;
+  result.classList.remove('d-none');
+
+});

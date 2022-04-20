@@ -1,36 +1,119 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Quiz</title>
-    <link src = "assets/css/style.css"type= "stylesheet"> 
+    <title>JavaScript Quiz Wiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-<div class="container">
-    <div id="text001">
-        <h2>Quiz</h2>
-        <p>Question: <text id="number001">0</text></p>
-        <p>Score: <text id="score001">0</text></p>
-    <hr />
-        <div id="message001">Click begin to start!</div>
-    </div>
-    <div id="text002">
-        <div id="question001"></div>
-        <div id="option001"></div>
-        <div id="option002"></div>
-        <div id="option003"></div>
-        <div id="option004"></div>
-        <div id="answer001"></div>
-    </div>   
-        <div id="text001">
-            <div id="disappear001"><button class="button001" onclick="begin001()">Begin</button></div>
+    <header class="bg-primary">
+        <H1 id="bigtitle" class="text-white py-3 text-center" >javaScript Quiz</H1>
+    </header>
+
+    <div class="result py-4 bg-light d-none text-center">
+        <div class="container-lead">
+            <p>You got a <span class="text-primary display-4 p-3">0%</span> correct!</p>
         </div>
-    <div id="next001"></div>
+    </div>
+        
+             <!-- quiz section -->
+  <div class="quiz py-4 bg-primary">
+    <div class="container">
+      <h2 class="my-5 text-white">On with the questions...</h2>
 
-</div>
+      <form class="quiz-form text-light">
+        <div class="my-5">
+          <p class="lead font-weight-normal">1. Who inventejavaScript?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="A" checked>
+            <label class="form-check-label">Elon Musk</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="B">
+            <label class="form-check-label">Brandon Eich</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="C">
+            <label class="form-check-label">Paul Allen</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="D">
+            <label class="form-check-label">Bill Gates</label>
+          </div>
+        </div>
+        <div class="my-5">
+          <p class="lead font-weight-normal">2. How do you find the minimum of x and y using javaScript?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q2" value="A" checked>
+            <label class="form-check-label">Min(x,y)</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q2" value="B">
+            <label class="form-check-label">Math.min(x,y)</label>
+          </div>
+        <div class="form-check my-2 text-white-50">
+          <input type="radio" name="q2" value="C">
+          <label class="form-check-label">Math.min(xy)</label>
+        </div>
+        <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q2" value="D">
+            <label class="form-check-label">Min(xy)</label>
+        </div>
+        <div class="my-5">
+          <p class="lead font-weight-normal">3. Inside which HTML emelement do we put JavaScript? </p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q3" value="A" checked>
+            <label class="form-check-label">javaScript</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q3" value="B">
+            <label class="form-check-label">script</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q3" value="C">
+            <label class="form-check-label">scripting</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q3" value="D">
+            <label class="form-check-label">js</label>
+          </div>
+        </div>
+        <div class="my-5">
+          <p class="lead font-weight-normal">4. Which document method allows you to select a class or an id as well?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q4" value="A" checked>
+            <label class="form-check-label">forEach()</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q4" value="B">
+            <label class="form-check-label">querySelector</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q4" value="C">
+            <label class="form-check-label">getElementById</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q4" value="D">
+            <label class="form-check-label">slice()</label>
+          </div>
+        </div>
+    </div>
+        <div class="text-center">
+          <input type="submit" class="btn btn-light"> 
+        </div>
+      </form>
 
-</body>
+    </div>
+  </div>
+                <form class="light-text">
+                    <button type="button" class="btn btn-primary">submit</button>
+                </form>
+            
+           </div>
+          
+        </section>
+  
 <script src="assets/js/script.js"></script>
+</body>
 </html>
